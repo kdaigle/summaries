@@ -10,7 +10,11 @@
 <body>
   <div id="page" class="layout-grid">
     <header>
-      <%= link_to "Sign in", "#" %> | <%= link_to "Sign up", "#" %>
+      <% if current_user %>
+        Hello, <%= current_user.nickname %>! | <%= link_to "Sign out", sessions_path, :method => :delete %>
+      <% else %>
+        <%= link_to "Sign in or sign up", "/auth/twitter" %>
+      <% end %>
     </header>
 
     <% flash.each do |type, message| %>
