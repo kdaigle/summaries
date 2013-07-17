@@ -1,0 +1,12 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+
+development:
+  <<: *defaults
+  database: summaries_development
+
+test:
+  <<: *defaults
+  database: summaries_test
