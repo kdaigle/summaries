@@ -1,3 +1,3 @@
 Summaries::Application.routes.draw do
-  root "application#welcome"
+  root "welcome#index"
 end

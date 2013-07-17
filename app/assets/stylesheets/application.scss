@@ -1,0 +1,101 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require normalize
+ *= require_self
+ *= require_tree .
+ */
+
+ //
+ // SITE WIDE
+ //
+ #page {
+   width: 800px;
+   margin: 0 auto;
+ }
+
+ header {
+   padding: 8px 0px;
+   border-bottom: 2px solid #EBEBEB;
+   margin-bottom: 8px;
+   text-align: right;
+   color: #444;
+ }
+
+ .troubleshooting {
+   display: none;
+   font-size: 90%;
+   margin: 0px;
+   padding: 8px;
+   word-wrap: break-word;
+   border: 2px solid #DBDBDB;
+   border-radius: 8px;
+   background-color: #EBEBEB;
+   p {
+     margin: 0 0 6px;
+   }
+ }
+
+ //
+ // Forms
+ //
+ form {
+
+   label {
+     display: block;
+     margin-bottom: 4px;
+     margin-top: 6px;
+   }
+   input {
+     width: 400px;
+     padding: 4px;
+     margin: 0 0 8px;
+
+     &[type="submit"] {
+       display: block;
+       width: 200px;
+       margin-top: 1em;
+     }
+   }
+
+ }
+
+ //
+ // ICONS
+ //
+ a:link i {
+   text-decoration: none;
+ }
+ a:visited{
+   color: #444;
+ }
+
+ //
+ // FLASH MESSAGES
+ //
+ .flash {
+   border: 3px solid;
+   padding: 8px;
+   margin-bottom: 8px;
+
+   &.notice {
+     border-color: #CCEBFF;
+     background-color: #E6F5FF;
+   }
+   &.error {
+     border-color: #DB4D4D;
+     background-color: #FFCCCC;
+   }
+   &.success {
+     border-color: #5CD65C;
+     background-color: #D6F5D6;
+   }
+
+ }

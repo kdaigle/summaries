@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Summaries</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <title>Summari.es</title>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="page" class="layout-grid">
+    <header>
+      <%= link_to "Sign in", "#" %> | <%= link_to "Sign up", "#" %>
+    </header>
 
-<%= yield %>
+    <% flash.each do |type, message| %>
+      <div class="flash <%= type %>">
+        <%= message %>
+      </div>
+    <% end %>
 
+    <%= yield %>
+  </div>
 </body>
 </html>
