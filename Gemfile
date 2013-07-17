@@ -13,6 +13,8 @@ gem "turbolinks"
 gem "bcrypt-ruby", "~> 3.0.0"
 gem "unicorn"
 gem "foreman"
+gem "omniauth"
+gem "omniauth-twitter"
 gem "dotenv-rails"
 
 group :development, :test do
