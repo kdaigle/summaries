@@ -1,1 +1,9 @@
 <h1>Summari.es</h1>
+
+<p>
+  The goal of Summari.es is to give you an easy way to summarize content you've read. By summarizing content you read, you are able to retain more of the content for a longer period of time.
+</p>
+
+<% if current_user %>
+  <%= link_to "Your summaries", summaries_path %>
+<% end %>
