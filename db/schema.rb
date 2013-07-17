@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130717180712) do
+ActiveRecord::Schema.define(version: 20130717184000) do
+
+  create_table "summaries", force: true do |t|
+    t.integer  "user_id"
+    t.boolean  "public",           default: false
+    t.text     "content"
+    t.text     "markdown_content"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "summaries", ["user_id"], name: "index_summaries_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "uid"
