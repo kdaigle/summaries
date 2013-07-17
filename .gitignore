@@ -19,3 +19,4 @@ config/database.yml
 
 .env
 .env.development
+.env.production
