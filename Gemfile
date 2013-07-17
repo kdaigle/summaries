@@ -16,7 +16,7 @@ gem "foreman"
 gem "omniauth"
 gem "omniauth-twitter"
 gem "dotenv-rails"
-gem "github-markdown"
+gem "github-markdown", :require => "github/markdown"
 
 group :development, :test do
   gem "rspec-rails"

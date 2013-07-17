@@ -5,6 +5,12 @@ module CurrentUser
     helper_method :current_user
   end
 
+  def current_user_required
+    return true if current_user
+    flash[:notice] = "You have to be signed in first!"
+    redirect_to root_path
+  end
+
   def sign_in_user(user)
     cookies[:user_id] = user.id
   end

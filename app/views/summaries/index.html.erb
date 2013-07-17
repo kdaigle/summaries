@@ -1,0 +1,11 @@
+<h1>Summari.es</h1>
+
+<h2>Your summaries</h2>
+
+<%= link_to "New summary", new_summary_path %>
+
+<ul>
+  <% @summaries.each do |summary| %>
+    <li><%= link_to summary.url, summary %></li>
+  <% end %>
+</ul>

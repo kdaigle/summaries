@@ -1,0 +1,15 @@
+<h1>Summari.es</h1>
+
+<h2>Your summaries</h2>
+
+<%= form_for @summary do |form| %>
+
+  <%= form.label :url %>
+  <%= form.text_field :url %>
+
+  <%= form.label :content, "Summarize it" %>
+  <%= form.text_area :content %>
+
+  <%= submit_tag "Save it" %>
+
+<% end %>

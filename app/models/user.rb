@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
   # column :name
   validates :name, :presence => true
 
+  has_many :summaries
+
   def self.find_or_create_from_auth_hash(auth_hash)
     user = find_or_initialize_by_uid(auth_hash[:uid])
     user.token = auth_hash[:credentials][:token]
