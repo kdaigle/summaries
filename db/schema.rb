@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130717184000) do
+ActiveRecord::Schema.define(version: 20130718131411) do
 
   create_table "summaries", force: true do |t|
     t.integer  "user_id"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20130717184000) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
   end
 
   add_index "summaries", ["user_id"], name: "index_summaries_on_user_id", using: :btree

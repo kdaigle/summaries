@@ -20,6 +20,10 @@ class Summary < ActiveRecord::Base
   # column :url
   validates :url, :presence => true
 
+  # The title of the summary or article.
+  # column :title
+  validates :title, :presence => true
+
   # Private: Take the content and process it through Markdown. Cache it.
   #
   # Returns TrueClass.
