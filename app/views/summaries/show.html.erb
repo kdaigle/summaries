@@ -1,3 +1,5 @@
+<h1><%= @summary.title %></h1>
+
 <%= raw @summary.markdown_content %>
 
-<%= link_to "Edit", edit_summary_path(@summary) %>
+<%= link_to "View original article <i class=\"icon-external-link\"></i>".html_safe, @summary.url %> or <%= link_to "edit your summary", edit_summary_path(@summary) %>

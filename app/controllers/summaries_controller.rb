@@ -14,6 +14,7 @@ class SummariesController < ApplicationController
     @summary = current_user.summaries.new
     @summary.content = params[:summary][:content]
     @summary.url     = params[:summary][:url]
+    @summary.title   = params[:summary][:title]
 
     if @summary.save
       redirect_to @summary
@@ -34,6 +35,7 @@ class SummariesController < ApplicationController
     @summary = current_user.summaries.find(params[:id])
     @summary.content = params[:summary][:content]
     @summary.url     = params[:summary][:url]
+    @summary.title   = params[:summary][:title]
 
     if @summary.save
       redirect_to @summary

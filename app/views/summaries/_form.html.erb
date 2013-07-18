@@ -1,0 +1,11 @@
+<%= form_for @summary do |form| %>
+
+  <%= form.text_field :title, :placeholder => "Title" %>
+
+  <%= form.text_field :url, :placeholder => "URL" %>
+
+  <%= form.text_area :content, :placeholder => "Your summary" %>
+
+  <%= submit_tag "Save it" %>
+
+<% end %>
